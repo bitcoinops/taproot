@@ -96,6 +96,11 @@ class TestWrapper:
             self.options.usecli = usecli
             self.options.perf = perf
             self.options.randomseed = randomseed
+            # With v26.0 BDB wallet creation is deprecated
+            # this re-enables it temporarily
+            # TODO: create descriptor wallets as legacy wallet
+            # support will be removed in a future realease
+            self.extra_args = [['-deprecatedrpc=create_bdb']]
 
             self.options.bitcoind = bitcoind
             self.options.bitcoincli = bitcoincli
