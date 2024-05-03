@@ -116,7 +116,9 @@ documentation on building bitcoind on
 [macOS](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md), or
 [Windows](https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md).
 
-Note that these notebooks will make use of the `bitcoind` wallet and so when following the build instructions above, do *not* use the `--disable-wallet` flag.
+Note that these notebooks will make use of the `bitcoind` wallet and so when
+following the build instructions above, do *not* use the `--disable-wallet`
+flag. Be sure to build with berkeley-db support which is required for legacy wallets.
 
 No need to run `bitcoind` or download the mainchain or testnet blockchain. We will
 run in regtest mode and spawn node instances via scripts.
